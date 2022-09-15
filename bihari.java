@@ -15,6 +15,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.awt.event.ActionEvent;
+import java.text.DecimalFormat;
 
 public class bihari extends JFrame {
 
@@ -89,8 +90,8 @@ public class bihari extends JFrame {
 				float b = (a*100);
 				
 				
-				
-				perc = Float.toString(b);
+				DecimalFormat df = new DecimalFormat(".00");
+				String perc = df.format(b);
 				text_Percent.setText(perc);
 				
 				String url = "jdbc:sqlserver://DESKTOP-H55I65M;databaseName=project;encrypt=false;";
